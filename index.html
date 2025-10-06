@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب انضمام للطاقم - Hydra Land</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fab fa-discord"></i>
+                <h1>Hydra Land</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home">الرئيسية</a>
+                <a href="#application">طلب الانضمام</a>
+                <a href="#rules">القوانين</a>
+                <a href="#faq">الأسئلة الشائعة</a>
+                <a href="#contact">التواصل</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>انضم لفريق الطاقم في Hydra Land</h1>
+                <p>كن جزءاً من مجتمعنا المتميز وساهم في بناء أفضل تجربة للأعضاء</p>
+                <a href="#application" class="cta-button">
+                    <i class="fas fa-user-plus"></i>
+                    قدم طلبك الآن
+                </a>
+                <a href="https://discord.gg/JvxMctVCFs" target="_blank" class="discord-button">
+                    <i class="fab fa-discord"></i>
+                    انضم للديسكورد
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="application" class="application-section">
+        <div class="container">
+            <h2>نموذج طلب الانضمام للطاقم</h2>
+            <div class="form-container">
+                <form id="staffApplication" class="application-form">
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i>
+                            البريد الإلكتروني (Gmail)
+                        </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i>
+                            الاسم الكامل
+                        </label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">
+                                <i class="fas fa-calendar-alt"></i>
+                                العمر
+                            </label>
+                            <input type="number" id="age" name="age" min="13" max="99" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthday">
+                                <i class="fas fa-birthday-cake"></i>
+                                تاريخ الميلاد
+                            </label>
+                            <input type="date" id="birthday" name="birthday" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timezone">
+                            <i class="fas fa-globe"></i>
+                            المنطقة الزمنية
+                        </label>
+                        <select id="timezone" name="timezone" required>
+                            <option value="">اختر المنطقة الزمنية</option>
+                            <option value="UTC+3">التوقيت العربي السعودي (UTC+3)</option>
+                            <option value="UTC+2">توقيت مصر (UTC+2)</option>
+                            <option value="UTC+1">توقيت المغرب (UTC+1)</option>
+                            <option value="UTC+4">توقيت الإمارات (UTC+4)</option>
+                            <option value="UTC+0">توقيت جرينتش (UTC+0)</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weeklyHours">
+                            <i class="fas fa-clock"></i>
+                            عدد الساعات المتاحة أسبوعياً
+                        </label>
+                        <select id="weeklyHours" name="weeklyHours" required>
+                            <option value="">اختر عدد الساعات</option>
+                            <option value="1-5">1-5 ساعات</option>
+                            <option value="6-10">6-10 ساعات</option>
+                            <option value="11-20">11-20 ساعة</option>
+                            <option value="21-30">21-30 ساعة</option>
+                            <option value="30+">أكثر من 30 ساعة</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">
+                            <i class="fas fa-medal"></i>
+                            الخبرة في إدارة السيرفرات
+                        </label>
+                        <textarea id="experience" name="experience" rows="4" placeholder="اكتب عن خبرتك السابقة في إدارة السيرفرات، المنصات التي عملت عليها، والمهارات التي تمتلكها..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">
+                            <i class="fas fa-heart"></i>
+                            لماذا تريد الانضمام لفريق الطاقم؟
+                        </label>
+                        <textarea id="motivation" name="motivation" rows="3" placeholder="اكتب الأسباب التي تدفعك للانضمام لفريق الطاقم وكيف يمكنك المساهمة..." required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeRules" name="agreeRules" required>
+                            <span class="checkmark"></span>
+                            أوافق على جميع قوانين السيرفر وشروط الطاقم
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i>
+                        إرسال الطلب
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Server Rules -->
+    <section id="rules" class="rules-section">
+        <div class="container">
+            <h2>قوانين ومتطلبات الطاقم</h2>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>الالتزام بالوقت</h3>
+                    <p>يجب على أعضاء الطاقم الالتزام بساعات العمل المحددة والتواجد بانتظام</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>احترام الأعضاء</h3>
+                    <p>التعامل بأدب واحترام مع جميع أعضاء السيرفر والطاقم</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>الحياد والعدالة</h3>
+                    <p>تطبيق القوانين بعدالة دون تحيز أو محاباة</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>التواصل الفعال</h3>
+                    <p>التواصل المستمر مع الإدارة والطاقم لحل المشاكل</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>عدم إساءة الاستخدام</h3>
+                    <p>عدم إساءة استخدام الصلاحيات أو التلاعب بالنظام</p>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>التطوير المستمر</h3>
+                    <p>الرغبة في التعلم وتطوير المهارات باستمرار</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>الأسئلة الشائعة</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي المناصب المتاحة للطاقم؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نوفر عدة مناصب: مشرف (Moderator)، مساعد (Helper)، مشرف محتوى، ومشرف الأحداث. كل منصب له مسؤولياته وصلاحياته الخاصة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هو الحد الأدنى للعمر للانضمام؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الحد الأدنى للعمر هو 16 سنة، مع استثناءات خاصة للمتقدمين المميزين من عمر 14-15 سنة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كم من الوقت يستغرق الرد على الطلب؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نحاول الرد على جميع الطلبات خلال 3-7 أيام عمل. سيتم إخطارك بالنتيجة عبر البريد الإلكتروني.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل أحتاج لخبرة سابقة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الخبرة السابقة مفيدة ولكنها ليست إلزامية. نحن نقدر الحماس والرغبة في التعلم أكثر من الخبرة فقط.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي فوائد كوني عضو في الطاقم؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ستحصل على رتب خاصة، صلاحيات إضافية، شارات مميزة، وفرصة للمشاركة في القرارات المهمة للسيرفر.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل يمكنني التقدم مرة أخرى إذا تم رفض طلبي؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، يمكنك التقدم مرة أخرى بعد شهر واحد من تاريخ الرفض، مع إظهار تحسن في النقاط المطلوبة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>تواصل معنا</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>سيرفر الديسكورد</h3>
+                    <p>انضم لسيرفرنا الرسمي على الديسكورد</p>
+                    <a href="https://discord.gg/JvxMctVCFs" target="_blank" class="contact-link">
+                        discord.gg/JvxMctVCFs
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>للاستفسارات والدعم الفني</p>
+                    <a href="/cdn-cgi/l/email-protection#4c3f382d2a2a0c2435283e2d202d2228622f2321" class="contact-link">
+                        <span class="__cf_email__" data-cfemail="5d2e293c3b3b1d3524392f3c313c3339733e3230">[email&#160;protected]</span>
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>ساعات العمل</h3>
+                    <p>نحن متاحون للرد على استفساراتكم</p>
+                    <p class="contact-link">24/7 أيام الأسبوع</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hydra Land</h3>
+                    <p>أفضل مجتمع ديسكورد عربي للألعاب والترفيه</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#application">طلب انضمام</a></li>
+                        <li><a href="#rules">القوانين</a></li>
+                        <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/JvxMctVCFs" target="_blank">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hydra Land. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h2>تم إرسال الطلب بنجاح!</h2>
+            </div>
+            <div class="modal-body">
+                <p>شكراً لك على تقديم طلب الانضمام لفريق الطاقم.</p>
+                <p>سيتم مراجعة طلبك والرد عليك خلال 3-7 أيام عمل عبر البريد الإلكتروني.</p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="modal-button">حسناً</button>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+</body>
+</html>
